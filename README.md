@@ -1,17 +1,12 @@
-<<<<<<< HEAD
-factorial_benchmark
-===================
-
-Benchmark for factorial calculation in Ruby and Haskel
-=======
 Benchmarking Standard Factorial Performance
 ===========================================
 These are examples of factorial calculation in Ruby and Haskel along with benchmarking library examples in both languages.
+The Haskel library Criterion has more details about the variance in the run time of the samples while the Ruby benchmark is better at describing "where" the calculations are taking place between the user program and the system that's running it.
 
 Output
 -------
 
-Ruby Benchmarking output, the actual factorial is omitted, it has 973351 digits.
+Ruby Benchmarking output, the actual factorial is omitted, it has 973351 digits. The mean for 100 sample is 25.903264
 ```sh
 Rehearsal ----------------------------------------------------------------------------------------------------------------------------------------
 factorial 200000                                                                                      16.750000   6.080000  22.830000 ( 22.834252)
@@ -48,11 +43,14 @@ variance is moderately inflated by outliers
 
 Libraries Used
 --------------
-A word about Criterion.Main, this will be the benchmarking tool used to profil the Haskell performance http://hackage.haskell.org/package/criterion-0.5.0.10 to download and then build. On MacOSX the charting library used by Criterion is not supported so ommit it when building 
+A word about [Criterion.Main](http://hackage.haskell.org/package/criterion-0.5.0.10), this will be the benchmarking tool used to profil the Haskell performance  to download and then build. On MacOSX the charting library used by Criterion is not supported so ommit it when building 
 ```
 cabal install criterion -f-chart
 ```
 
+Ruby gem Benchmark should already be available with your Ruby distribution, if not run:
+```sh
+gem install benchmark
+```
 
 
->>>>>>> a240425... Examples for factorial calculation with benchmarks in Haskel and Ruby

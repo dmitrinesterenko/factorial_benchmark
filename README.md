@@ -7,13 +7,13 @@ Output
 -------
 
 Ruby Benchmarking output, the actual factorial is omitted, it has 973351 digits. The mean for 100 sample is 25.903264
-```sh
-Rehearsal ----------------------------------------------------------------------------------------------------------------------------------------
-factorial 200000                                                                                      16.750000   6.080000  22.830000 ( 22.834252)
------------------------------------------------------------------------------------------------------------------------------- total: 22.830000sec
 
-                                                                                                           user     system      total        real
-factorial 200000                                                                                      17.520000   8.380000  25.900000 ( 25.903264)
+```sh
+Rehearsal
+factorial 200000                                        16.750000   6.080000  22.830000 ( 22.834252) 
+
+                                                            user     system      total        real
+factorial 200000                                        17.520000   8.380000  25.900000 ( 25.903264)
 
 ```
 Haskel Criterion.Main formatted output, the mean for 100 samples is 15.2578 seconds.

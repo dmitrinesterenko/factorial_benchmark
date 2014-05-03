@@ -1,5 +1,7 @@
 dist
 cabal-dev
+factorial_texas
+*.out
 *.o
 *.hi
 *.chi

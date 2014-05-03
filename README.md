@@ -3,6 +3,18 @@ Benchmarking Standard Factorial Performance
 These are examples of factorial calculation in Ruby and Haskel along with benchmarking library examples in both languages.
 The Haskel library Criterion has more details about the variance in the run time of the samples while the Ruby benchmark is better at describing "where" the calculations are taking place between the user program and the system that's running it.
 
+Running
+-------
+Haskel, install the [Haskel platform](http://www.haskell.org/platform/)
+```sh
+ghc factorial.hs
+./factorial
+```
+Ruby
+```sh
+ruby factorial.rb
+```
+
 Output
 -------
 
@@ -53,4 +65,29 @@ Ruby gem Benchmark should already be available with your Ruby distribution, if n
 gem install benchmark
 ```
 
+Texas list with product
+-----------------------
+factorial_texas.hs reimplements factorial by creating a Texas list [0..x] and using the production function
+```hs
+product [0..200000]
+```
+How does it perform? Worse than the proper factorial definition with a mean of 20.99105 s.
+```sh
+warming up
+estimating clock resolution...
+mean is 1.027501 us (640001 iterations)
+found 1077015 outliers among 639999 samples (168.3%)
+  487527 (76.2%) low severe
+  589488 (92.1%) high severe
+estimating cost of a clock call...
+mean is 48.70268 ns (8 iterations)
+
+benchmarking factorial/200000
+collecting 100 samples, 1 iterations each, in estimated 2119.986 s
+mean: 20.99105 s, lb 20.88344 s, ub 21.09325 s, ci 0.950
+std dev: 536.4753 ms, lb 490.5400 ms, ub 588.1201 ms, ci 0.950
+variance introduced by outliers: 19.043%
+variance is moderately inflated by outliers
+
+```
 

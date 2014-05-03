@@ -1,5 +1,5 @@
 Benchmarking Standard Factorial Performance
-===========================================
+-------------------------------------------
 These are examples of factorial calculation in Ruby and Haskel along with benchmarking library examples in both languages.
 The Haskel library Criterion has more details about the variance in the run time of the samples while the Ruby benchmark is better at describing "where" the calculations are taking place between the user program and the system that's running it.
 
